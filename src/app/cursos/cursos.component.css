@@ -1,0 +1,29 @@
+
+body {
+    font-family: "Arial";
+    font-size: 15px;
+}
+
+#cursos {
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#certificate {
+    margin-left: 90px;
+}
+
+#cursos thead th {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+}
+
+#cursos tbody td {
+    background-color: #edecec;
+    padding: 10px;
+}

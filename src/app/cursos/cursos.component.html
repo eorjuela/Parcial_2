@@ -1,0 +1,42 @@
+
+<nav class="navbar" style="background-color: #26b662;">
+  <div class = "container-fluid">
+      <a class="navbar-brand" href="#" style = "color:black;">
+        <th>Cursos en Linea</th>
+        </a>
+  </div>
+</nav>
+<div class="row">
+  <div class="col-9">
+    <table id="cursos" class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Plataforma</th>
+          <th>Lanzamiento</th>
+          <th>Duracion (h)</th>
+        </tr>
+      </thead>   
+      <tbody>
+        <tr *ngFor="let c of cursos">
+          <td>
+            <b>{{c.id}}</b>
+          </td>
+          <td>
+            <a class="card-block text-decoration-none" (click)="onSelected(c)">
+              {{c.title}}
+            </a>
+          </td>
+          <td>{{c.platform}}</td>
+          <td>{{c.launch_year}}</td>
+          <td>{{c.duration_hours}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p id="certificate">Los cursos: {{certificate}} ofrecen certificado</p>
+  </div>
+  <div class="col-3" *ngIf="selected">
+    <app-cursos-detail [cursoSelected]="selectedCurso"></app-cursos-detail>
+  </div>
+</div>
